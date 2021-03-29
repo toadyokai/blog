@@ -1,42 +1,39 @@
+const { auto } = require("async");
+
 module.exports = {
+    base: '/',
     themeConfig: {
         logo: '/assets/img/logo.png',
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Foo', link: '/foo/' },
-            { text: 'Bar', link: '/bar/' },
-            { text: 'External', link: 'https://google.com', target: '_self', rel: '' },
-            { text: 'Guide', link: '/guide/', target: '_blank' }
+            // { text: 'Home', link: '/blog' },
+            { text: '随笔', link: '/essays/' },
+            { text: '技术', link: '/tech/' },
         ],
-        sidebar: {
-            '/foo/': [
-                {
-                    title: '目录结构',
-                    path: '/two/',
-                    collapsable: false,
-                    children: [{
-                        title: 'Stage',
-                        path: '/foo/one.md'
-                    },
-                    {
-                        title: 'Representation',
-                        path: '/foo/two.md'
-                    }
-                    ],
-                },
-            ],
+        // sidebar: {
+        //     '/tech/': [
+        //         {
+        //             title: '浏览器',
+        //             path: '/browser/',
+        //             collapsable: false,
+        //             children: [],
+        //         },
+        //         {
+        //             title: 'WebGL',
+        //             path: '/webgl/',
+        //             collapsable: false,
+        //             children: [],
+        //         },
+        //     ],
 
-            '/bar/': [
-                {
-                    title: '基础理论',
-                    collapsable: false,
-                    path: '/theory/',
-                    children: [{
-                        title: 'Shader编程',
-                        path: '/bar/three.md'
-                    }],
-                },
-            ]
-        }
+        //     '/essays/': [
+        //         {
+        //             title: '基础理论',
+        //             collapsable: false,
+        //             path: '/theory/',
+        //             children: [],
+        //         },
+        //     ]
+        // }
+        sidebar: 'auto'
     }
 }
