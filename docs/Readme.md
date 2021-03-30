@@ -1,10 +1,10 @@
 ---
 home: true
 lang: zh-CN
-heroText: A  Personal Blog
+heroText: 反对蛙
 # heroImage: /logo.jpg
-actionText: 开始 →
-actionLink: /interview/
+actionText: 我反对 →
+actionLink: /essays/
 # features:
 # - title: A Blog
 #   details: 专注写作前端博客，记录日常所得。

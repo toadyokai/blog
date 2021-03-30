@@ -1,39 +1,46 @@
 const { auto } = require("async");
 
 module.exports = {
-    base: '/',
+    base: '/blog/',
+    title: '反对蛙',
     themeConfig: {
-        logo: '/assets/img/logo.png',
+        searchMaxSuggestions: 10,
         nav: [
             // { text: 'Home', link: '/blog' },
+            { text: 'WebGL', link: '/tech/webgl/' },
+            { text: 'Chrome', link: '/tech/chrome/' },
             { text: '随笔', link: '/essays/' },
-            { text: '技术', link: '/tech/' },
+            // {
+            //     text: '技术',
+            //     items: [
+            //         {
+            //             text: 'WebGL',
+            //             link: '/tech/webgl/readme'
+            //         },
+            //         {
+            //             text: 'Chrome',
+            //             link: '/tech/chrome/readme'
+            //         },
+            //     ]
+            // },
         ],
-        // sidebar: {
-        //     '/tech/': [
-        //         {
-        //             title: '浏览器',
-        //             path: '/browser/',
-        //             collapsable: false,
-        //             children: [],
-        //         },
-        //         {
-        //             title: 'WebGL',
-        //             path: '/webgl/',
-        //             collapsable: false,
-        //             children: [],
-        //         },
-        //     ],
-
-        //     '/essays/': [
-        //         {
-        //             title: '基础理论',
-        //             collapsable: false,
-        //             path: '/theory/',
-        //             children: [],
-        //         },
-        //     ]
-        // }
-        sidebar: 'auto'
+        sidebar: {
+            '/tech/webgl/': [{
+                title: 'WebGL',
+                collapsable: false,
+                children: [
+                    '',
+                    'shader',
+                    'test',
+                ]
+            }],
+            '/tech/chrome/': [{
+                title: 'Chrome',
+                collapsable: false,
+                children: [
+                    '',
+                ]
+            }]
+        }
     }
 }
