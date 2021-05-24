@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>绘制和变换三角形 | 反对蛙</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.9f2d48e0.js" as="script"><link rel="preload" href="/blog/assets/js/2.bcd89593.js" as="script"><link rel="preload" href="/blog/assets/js/14.4dcc5c39.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.02627e3c.js"><link rel="prefetch" href="/blog/assets/js/11.f0cdf1d2.js"><link rel="prefetch" href="/blog/assets/js/12.5c2f5625.js"><link rel="prefetch" href="/blog/assets/js/13.41c671fc.js"><link rel="prefetch" href="/blog/assets/js/15.83b21dab.js"><link rel="prefetch" href="/blog/assets/js/16.4f21edd7.js"><link rel="prefetch" href="/blog/assets/js/17.5dda5740.js"><link rel="prefetch" href="/blog/assets/js/18.8fa9b4dc.js"><link rel="prefetch" href="/blog/assets/js/19.3a7422b6.js"><link rel="prefetch" href="/blog/assets/js/20.e444f809.js"><link rel="prefetch" href="/blog/assets/js/21.7164eac7.js"><link rel="prefetch" href="/blog/assets/js/22.8c7cb823.js"><link rel="prefetch" href="/blog/assets/js/23.f735c5af.js"><link rel="prefetch" href="/blog/assets/js/3.5aa078e3.js"><link rel="prefetch" href="/blog/assets/js/4.1b07bf5c.js"><link rel="prefetch" href="/blog/assets/js/5.d56686f5.js"><link rel="prefetch" href="/blog/assets/js/6.bb915e06.js"><link rel="prefetch" href="/blog/assets/js/7.2143f453.js"><link rel="prefetch" href="/blog/assets/js/8.02e7f77a.js"><link rel="prefetch" href="/blog/assets/js/9.3d2183e3.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">反对蛙</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/tech/webgl/" class="nav-link router-link-active">
+  WebGL
+</a></div><div class="nav-item"><a href="/blog/tech/chrome/" class="nav-link">
+  Chrome
+</a></div><div class="nav-item"><a href="/blog/essays/" class="nav-link">
+  随笔
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/tech/webgl/" class="nav-link router-link-active">
+  WebGL
+</a></div><div class="nav-item"><a href="/blog/tech/chrome/" class="nav-link">
+  Chrome
+</a></div><div class="nav-item"><a href="/blog/essays/" class="nav-link">
+  随笔
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>WebGL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/tech/webgl/chapter-1.html" class="sidebar-link">第一章 WebGL概述</a></li><li><a href="/blog/tech/webgl/chapter-2.html" class="sidebar-link">WebGL入门</a></li><li><a href="/blog/tech/webgl/chapter-3.html" aria-current="page" class="active sidebar-link">绘制和变换三角形</a></li><li><a href="/blog/tech/webgl/chapter-4.html" class="sidebar-link">高级变换和动画基础变换</a></li><li><a href="/blog/tech/webgl/chapter-5.html" class="sidebar-link">颜色和纹理</a></li><li><a href="/blog/tech/webgl/chapter-6.html" class="sidebar-link">着色器语言(GLSL ES)</a></li><li><a href="/blog/tech/webgl/chapter-7.html" class="sidebar-link">三维世界</a></li><li><a href="/blog/tech/webgl/chapter-8.html" class="sidebar-link">光照</a></li><li><a href="/blog/tech/webgl/chapter-9.html" class="sidebar-link">层次模型</a></li><li><a href="/blog/tech/webgl/chapter-10.html" class="sidebar-link">高级技术</a></li><li><a href="/blog/tech/webgl/shader.html" class="sidebar-link">Shader</a></li><li><a href="/blog/tech/webgl/test.html" class="sidebar-link">Test</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="绘制和变换三角形"><a href="#绘制和变换三角形" class="header-anchor">#</a> 绘制和变换三角形</h1></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/tech/webgl/chapter-2.html" class="prev">
+        WebGL入门
+      </a></span> <span class="next"><a href="/blog/tech/webgl/chapter-4.html">
+        高级变换和动画基础变换
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.9f2d48e0.js" defer></script><script src="/blog/assets/js/2.bcd89593.js" defer></script><script src="/blog/assets/js/14.4dcc5c39.js" defer></script>
+  </body>
+</html>
