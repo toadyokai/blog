@@ -3,7 +3,7 @@ home: true
 lang: zh-CN
 heroText: 反对蛙
 # heroImage: /logo.jpg
-actionText: 我反对 →
+# actionText:  →
 actionLink: /essays/
 # features:
 # - title: A Blog
