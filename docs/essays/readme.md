@@ -1,3 +1,4 @@
+```
 function observer(obj, targetVariable, callback){
     if (!obj.data) {
         obj.data = {}
@@ -43,7 +44,7 @@ event.on('open', (data) => {
   console.log(data)
 })
 event.emit('open', { open: true })
-
+```
 订阅发布模式:
     - 具有一个事件管理中心
     - 可以订阅与发布之间不存在直接关系
